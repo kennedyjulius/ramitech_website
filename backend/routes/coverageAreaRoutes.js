@@ -1,11 +1,11 @@
 const express = require("express");
 const { addCoverageArea, getCoverageAreas, deleteCoverageArea } = require("../controllers/coverageAreaController");
-const authMiddleware = require("../middleware/authMiddleware");
+const { protect } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-router.post("/", authMiddleware, addCoverageArea);
+router.post("/", protect, addCoverageArea);
 router.get("/", getCoverageAreas);
-router.delete("/:id", authMiddleware, deleteCoverageArea);
+router.delete("/:id", protect, deleteCoverageArea);
 
 module.exports = router;

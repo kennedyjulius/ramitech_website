@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const coverageAreaSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: { type: String },
-});
+  areaName: { type: String, required: true },
+  details: { type: String, required: true },
+  createdBy: { type: String, required: true },
+}, { timestamps: true });
 
-module.exports = mongoose.model("CoverageArea", coverageAreaSchema);
+module.exports = mongoose.model('CoverageArea', coverageAreaSchema);

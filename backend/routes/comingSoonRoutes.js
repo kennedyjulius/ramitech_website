@@ -1,12 +1,11 @@
-const express = require("express");
-const { updateComingSoon, getComingSoon } = require("../controllers/comingSoonController");
-const authMiddleware = require("../middleware/authMiddleware");
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
-
+const express = require('express');
 const router = express.Router();
+const comingSoonController = require('../controllers/comingSoonController');
 
-router.put("/", authMiddleware, upload.single("image"), updateComingSoon);
-router.get("/", getComingSoon);
+// Update the Coming Soon section (admin only)
+router.post('/', comingSoonController.updateComingSoon);  // This will be for updating
+
+// Optionally, you can add a route to get the current "Coming Soon" section (optional)
+router.get('/', comingSoonController.getComingSoon);
 
 module.exports = router;

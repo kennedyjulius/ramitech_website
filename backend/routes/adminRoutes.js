@@ -1,8 +1,16 @@
-const express = require("express");
-const { loginAdmin, resetPassword } = require("../controllers/adminController");
+const express = require('express');
+const { signup, login, getProfile, resetPassword } = require('../controllers/adminController');
+const { protect } = require('../middleware/authMiddleware');
 const router = express.Router();
 
-router.post("/login", loginAdmin);
-router.post("/reset-password", resetPassword);
+// Signup and Login routes
+router.post('/signup', signup);
+router.post('/login', login);
+
+// Profile route (protected)
+router.get('/profile', getProfile);
+
+// Reset password route
+router.post('/reset-password', resetPassword);
 
 module.exports = router;
