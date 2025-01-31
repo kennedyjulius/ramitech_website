@@ -49,8 +49,8 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <Newsletter />
+        {/* Newsletter Section
+        <Newsletter /> */}
       </div>
     </div>
   );

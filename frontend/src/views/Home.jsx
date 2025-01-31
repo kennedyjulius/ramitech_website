@@ -34,8 +34,8 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Services Section */}
-      <Services />
+      {/* Services Section
+      <Services /> */}
 
       {/* Coverage Area
       <CoverageArea /> */}
