@@ -1,101 +1,186 @@
-import { Link } from "react-router-dom";
-import Newsletter from "../components/Newsletter";
+import Newsletter from './Newsletter';
 
 export default function Services() {
   const services = [
     {
-      title: "Broadband",
-      description: "High-speed internet for your daily needs",
-      icon: "🌐",
+      name: 'Broadband',
+      description: 'High-speed internet for your home',
+      image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=600&fit=crop'
     },
     {
-      title: "Wifi Plus",
-      description: "Enhanced wireless connectivity",
-      icon: "📡",
+      name: 'Wifi Plus',
+      description: 'Enhanced wireless connectivity',
+      image: 'https://images.unsplash.com/photo-1562907550-096d3bf9b25c?w=800&h=600&fit=crop'
     },
     {
-      title: "Movie TV",
-      description: "Stream your favorite content",
-      icon: "🎬",
+      name: 'Movie TV',
+      description: 'Premium entertainment channels',
+      image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&h=600&fit=crop'
     },
     {
-      title: "Mobile",
-      description: "Stay connected on the go",
-      icon: "📱",
+      name: 'Mobile',
+      description: 'Flexible mobile plans',
+      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop'
     },
     {
-      title: "Satellite",
-      description: "Wide coverage solutions",
-      icon: "🛰️",
+      name: 'Satellite',
+      description: 'Wide coverage satellite services',
+      image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&h=600&fit=crop'
     }
   ];
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-500 to-primary-400">
-        <div className="container mx-auto px-4 py-20">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Live all the connections with our services
-              </h1>
-              <p className="text-white text-lg mb-8">
-                Experience high-quality internet and entertainment services
+      {/* Hero Section with Wavy Background */}
+      <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute bottom-0 w-full h-20">
+            <svg viewBox="0 0 1440 120" className="w-full h-full">
+              <path fill="#ffffff" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 pt-20 pb-32 relative">
+          <h1 className="text-5xl font-bold text-white text-center mb-4">Services</h1>
+          <div className="w-32 h-1 bg-white mx-auto opacity-50"></div>
+        </div>
+      </div>
+
+     {/* Services Grid */}
+<div className="container mx-auto px-4 py-20">
+  <div className="max-w-6xl mx-auto">
+    <div className="mb-12">
+      <p className="text-primary-500 font-semibold mb-4">OUR SERVICES</p>
+      <h2 className="text-4xl font-bold mb-6">Live all the connections with our services</h2>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className="relative rounded-2xl p-8 text-white overflow-hidden bg-cover bg-center h-80 md:h-96"
+          style={{ backgroundImage: `url(${service.image})` }}
+        >
+          {/* Blurred Background Overlay */}
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+
+          {/* Card Content */}
+          <div className="relative z-10 flex flex-col justify-center h-full">
+            <h3 className="text-2xl font-bold mb-4">{service.name}</h3>
+            <p className="mb-6 opacity-90">{service.description}</p>
+            <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-900 transition-colors">
+              Read More
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
+
+      {/* Router Section */}
+      <div className="bg-gradient-to-br from-primary-500 to-primary-400 py-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold text-white mb-6">High signal quality</h2>
+                <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors">
+                  Read More
+                </button>
+              </div>
+              <div className="md:w-1/2">
+                <img
+                  src="https://images.unsplash.com/photo-1544428571-c4c4576ef362?w=800&h=600&fit=crop"
+                  alt="5G Router"
+                  className="w-full h-auto rounded-2xl shadow-lg mb-8"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <p className="text-primary-500 font-semibold mb-4">FREE STREAMING</p>
+              <h2 className="text-4xl font-bold mb-6">Celebrating with friends on an ultra fast internet is priceless</h2>
+              <img
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&fit=crop"
+                alt="Friends Streaming"
+                className="w-full h-auto rounded-2xl shadow-lg mb-8"
+              />
+            </div>
+            <div className="bg-primary-500 rounded-2xl p-8 text-white self-center">
+              <h3 className="text-2xl font-bold mb-4">Hire the best broadband in your region today</h3>
+              <p className="mb-8 opacity-90">
+                Get connected with high-speed internet that suits your needs.
               </p>
-              <Link to="/contact" className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors">
-                Get Started
-              </Link>
-            </div>
-            <div className="md:w-1/2">
-              <img src="/high-speed-internet.jpg" alt="High Speed Internet" className="rounded-lg shadow-xl" />
+              <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors">
+                Read More
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Services</h2>
-          <p className="text-gray-600">Choose the perfect plan for your needs</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <Link to={`/services/${service.title.toLowerCase()}`} className="text-primary-500 font-semibold hover:text-primary-600">
-                Learn More →
-              </Link>
+      {/* Questions Section */}
+      <div className="container mx-auto px-4 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Other questions about our services</h2>
+              <p className="text-gray-600 mb-8">
+                Find answers to commonly asked questions about our services and features.
+              </p>
+              <button className="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors">
+                Read More
+              </button>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Featured Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-3xl font-bold mb-4">Celebrating with friends on an ultra fast internet is priceless</h2>
-              <p className="text-gray-600 mb-6">Stream, game, and connect without interruption</p>
-              <Link to="/packages" className="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors">
-                View Packages
-              </Link>
-            </div>
-            <div className="md:w-1/2">
-              <img src="/friends-gaming.jpg" alt="Friends Gaming" className="rounded-lg shadow-xl" />
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=800&h=600&fit=crop"
+                alt="Customer Support"
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Newsletter Section */}
-      <div className="container mx-auto px-4 py-16">
-        <Newsletter />
+      {/* Newsletter and Help Section */}
+      <div className="container mx-auto px-4 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="bg-primary-500 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Newsletter</h3>
+            <div className="flex gap-2">
+              <input 
+                type="email" 
+                placeholder="Get news in your e-mail" 
+                className="flex-1 px-6 py-3 rounded-full focus:outline-none" 
+              />
+              <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors">
+                Go
+              </button>
+            </div>
+          </div>
+          <div className="bg-black text-white p-8 rounded-2xl flex items-center justify-center text-center">
+            <div>
+              <p className="text-sm mb-1">NEED HELP? CALL US 24/7</p>
+              <p className="text-primary-500 text-2xl">+202 4987 8976</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

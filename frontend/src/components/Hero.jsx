@@ -1,36 +1,37 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
-    return (
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h1 className="text-6xl font-bold leading-tight">
-                You deserve ultra<br />
-                fast internet for<br />
-                <span className="text-primary-500">work</span>
-              </h1>
-              <div className="bg-primary-50 p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-2">Unlimited apps, lots of</h3>
-                <p className="text-gray-600">biggest 5G coverage</p>
-              </div>
-              <button className="bg-primary-500 text-white px-8 py-4 rounded-full text-lg hover:bg-primary-600 transition-colors">
-                Get Started
-              </button>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://source.unsplash.com/random/800x600/?internet,router" 
-                alt="5G Router"
-                className="rounded-2xl shadow-xl"
-              />
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
-                <div className="bg-primary-500 text-white px-8 py-3 rounded-full whitespace-nowrap">
-                  The 5G provider has arrived at Zortex
-                </div>
-              </div>
-            </div>
+  return (
+    <section className="bg-primary-500 py-20 relative overflow-hidden">
+      {/* Decorative shapes */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary-400 rounded-full -translate-y-1/2 translate-x-1/2 opacity-20"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-400 rounded-full translate-y-1/2 -translate-x-1/2 opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="text-white space-y-8">
+            <h1 className="text-5xl font-bold leading-tight">
+              Live all the connections with our services
+            </h1>
+            <p className="text-xl opacity-90">
+              Experience high-quality internet and entertainment services
+            </p>
+            <Link 
+              to="/services" 
+              className="inline-block bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop"
+              alt="High Speed Internet"
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
           </div>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}

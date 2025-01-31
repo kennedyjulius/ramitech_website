@@ -1,48 +1,30 @@
-import { useState } from 'react';
-import Popup from '../components/Popup';
+import SpeedTest from '../components/SpeedTest';
+import Newsletter from '../components/Newsletter';
 
-export default function SpeedTest() {
-  const [showPopup, setShowPopup] = useState(false);
-  const [downloadSpeed, setDownloadSpeed] = useState('72mbps');
-
-  const startTest = () => {
-    setTimeout(() => {
-      setDownloadSpeed('95mbps');
-    }, 2000);
-  };
-
+export default function SpeedTestView() {
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen text-white p-8">
-      <div className="max-w-4xl mx-auto text-center animate-fadeIn">
-        <h1 className="text-5xl font-bold mb-8">Speed Test</h1>
-        
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-8 shadow-xl">
-          <div className="text-6xl font-mono mb-6">{downloadSpeed}</div>
-          <button
-            onClick={startTest}
-            className="bg-green-400 text-gray-900 px-8 py-3 rounded-full font-bold 
-            hover:scale-105 transition-transform duration-300"
-          >
-            CHECK SPEED
-          </button>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-primary-500 to-primary-400 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full opacity-10"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 bg-white rotate-45 opacity-10"></div>
         </div>
-
-        <p className="text-gray-400 text-lg mb-16">
-          Test your internet speed with Zortex Series 1 advanced diagnostics
-        </p>
-
-        <div className="bg-gray-800/50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6">5G Technology by Zortex</h2>
-          <div className="flex items-center justify-center gap-6">
-            <div className="w-32 h-32 bg-gray-700 rounded-lg" /> {/* Router image placeholder */}
-            <p className="text-gray-300 max-w-md">
-              TK router with advanced 5G technology providing ultra-fast connectivity
-            </p>
-          </div>
+        
+        <div className="container mx-auto px-4 py-20 relative">
+          <h1 className="text-5xl font-bold text-white text-center mb-4">Speed Test</h1>
+          <div className="w-32 h-1 bg-white mx-auto opacity-50"></div>
         </div>
       </div>
 
-      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
+      {/* Speed Test Component */}
+      <SpeedTest />
+
+      {/* Newsletter Section */}
+      <div className="py-20">
+        <Newsletter />
+      </div>
     </div>
   );
 }

@@ -106,7 +106,11 @@ export default function SpeedTest() {
             </ul>
           </div>
           <div>
-            <img src="/router-image.jpg" alt="5G Router" className="rounded-lg shadow-xl" />
+            <img 
+              src="https://images.unsplash.com/photo-1544428571-c4c4576ef362?w=800&h=600&fit=crop" 
+              alt="5G Router" 
+              className="rounded-lg shadow-xl w-full h-auto" 
+            />
           </div>
         </div>
       </div>
