@@ -68,9 +68,9 @@ export default function SpeedTest() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* <div className="container mx-auto px-4 py-16">
         <Newsletter />
-      </div>
+      </div> */}
 
       {/* Snackbar for External Link Warning */}
       {isSnackbarOpen && (

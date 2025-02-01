@@ -9,10 +9,10 @@ export default function Footer() {
   ];
 
   const usefulLinks = [
-    { name: 'Coverage Area', path: '/components/CoverageArea' },
-    { name: 'Speed Test', path: '/views/SpeedTest' },
-    { name: 'Dedicated Line', path: '/components/DedicatedLink' },
-    { name: 'FAQ', path: '/components/FAQ' }
+    { name: 'Coverage Area', path: '/coverage-area' },
+    { name: 'Speed Test', path: '/speed-test' },
+    { name: 'Dedicated Line', path: '/dedicated-line' },
+    { name: 'FAQ', path: '/faq' }
   ];
 
   const socialLinks = [

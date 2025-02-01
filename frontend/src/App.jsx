@@ -15,6 +15,7 @@ import DedicatedLink from './components/DedicatedLink'; // Check this name
 import EquipmentReturns from './components/ReturnEquipments';
 import ComingSoon from './components/ComingSoon';
 import CheckConnectionModal from './components/CheckConnectionModal';
+import About from './views/About'; // Added About import
 
 export default function App() {
   return (
@@ -26,7 +27,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesView />} />
             <Route path="/packages" element={<Packages />} />
-            <Route path="/about-us" element={<About />} />
+            <Route path="/coverage-area" element={<CoverageArea />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="/equipment-returns" element={<EquipmentReturns />} />

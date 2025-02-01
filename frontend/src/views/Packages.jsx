@@ -23,6 +23,7 @@ export default function Packages() {
 
       {/* Pricing Cards Section */}
       <PricingCards />
+      
 
       {/* Newsletter Section */}
       <div className="py-16">
@@ -30,7 +31,7 @@ export default function Packages() {
       </div>
 
       {/* Services Section */}
-      <Services />
+      
     </div>
   );
 }

@@ -59,6 +59,32 @@ export default function Navbar() {
             >
               My Account
             </Link>
+            <Link
+              to="/coverage-area"
+              className="p-2 rounded-full text-gray-500 hover:text-primary-500 hover:bg-gray-100"
+              title="Coverage Area"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -110,6 +136,13 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 My Account
+              </Link>
+              <Link
+                to="/coverage-area"
+                className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-colors text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Coverage Area
               </Link>
             </div>
           </div>

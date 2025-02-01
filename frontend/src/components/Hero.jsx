@@ -92,17 +92,11 @@ export default function Hero() {
           {/* Right Card */}
           <div className="bg-white rounded-3xl p-8 shadow-lg">
             <div className="relative aspect-video rounded-2xl overflow-hidden mb-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg">
-  <iframe 
-    className="w-full h-64 md:h-80 rounded-2xl" 
-    src="https://www.youtube.com/watch?v=p52PY_cwIsA&pp=ygUUaXNwIG1pbmkgZG9jdW1lbnRhcnk%3D" 
-    title="Network Video"
-    
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowFullScreen
-  ></iframe>
-</div>
-
+              <img
+                src="https://cdn-webportal.airtelstream.net/website/kenya/assets/images/5g-smart-connect-device.jpg"
+                alt="Family enjoying internet"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">

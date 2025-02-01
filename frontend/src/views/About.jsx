@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Newsletter from '../components/Newsletter';
 import Testimonials from '../components/Testimonials';
 import Packages from '../components/PricingCards';
+import CheckConnectionModal from '../components/CheckConnectionModal';
 
 export default function About() {
   return (
