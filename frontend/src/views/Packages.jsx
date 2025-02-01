@@ -5,32 +5,32 @@ import Services from '../components/Services';
 
 export default function Packages() {
   return (
-    
-    <div className="bg-gray-50">
-      {/* Pricing Section */}
-      <div className="container mx-auto px-4 py-24">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">PLANS & PRICING</h2>
-          <div className="flex gap-1 justify-center mb-6">
-            {[1, 2, 3, 4, 5].map((_, i) => (
-              <div key={i} className="w-2 h-2 rounded-full bg-emerald-400" />
-            ))}
+    <div className="bg-white">
+      {/* Hero Section with Wavy Background */}
+      <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute bottom-0 w-full h-20">
+            <svg viewBox="0 0 1440 120" className="w-full h-full">
+              <path fill="#ffffff" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
           </div>
-          <h3 className="text-3xl font-bold mb-4">The best internet at the best prices</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Choose a plan that fits your needs. High-speed, reliable, and affordable.
-          </p>
         </div>
-
-        {/* Pricing Cards */}
-        <PricingCards />
+        <div className="container mx-auto px-4 pt-20 pb-32 relative">
+          <h1 className="text-5xl font-bold text-white text-center mb-4">Packages</h1>
+          <div className="w-32 h-1 bg-white mx-auto opacity-50"></div>
+        </div>
       </div>
+
+      {/* Pricing Cards Section */}
+      <PricingCards />
 
       {/* Newsletter Section */}
       <div className="py-16">
         <Newsletter />
       </div>
-      </div>
-      
+
+      {/* Services Section */}
+      <Services />
+    </div>
   );
 }

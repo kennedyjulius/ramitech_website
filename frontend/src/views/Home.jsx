@@ -7,6 +7,7 @@ import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 import CoverageArea from '../components/CoverageArea';
 import FAQ from '../components/FAQ';
+import SpeedTest from '../components/SpeedTest';
 // import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -42,6 +43,8 @@ export default function Home() {
 
       {/* Packages Section
       <Packages /> */}
+      {/* {/Packages/} */}
+      <SpeedTest/>
 
       {/* Testimonials Section */}
       <Testimonials />

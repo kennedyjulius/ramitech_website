@@ -1,4 +1,5 @@
 import Newsletter from './Newsletter';
+import Hero5G from './Hero5G';
 
 export default function Services() {
   const services = [
@@ -83,49 +84,9 @@ export default function Services() {
 
 
 
-    <div className="bg-gradient-to-br from-primary-500 to-primary-400 py-20 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            {/* Left Content */}
-            <div className="md:w-1/2 text-white">
-              <h2 className="text-4xl font-bold mb-4">High Signal Quality</h2>
-              <p className="text-lg opacity-90 mb-6">
-                Experience ultra-fast speeds with our advanced 5G routers, ensuring the best connectivity.
-              </p>
-              <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors">
-                Read More
-              </button>
-            </div>
-
-            {/* Right Content - Router Image with Shape */}
-            <div className="md:w-1/2 relative flex justify-center">
-              <div className="relative">
-                {/* Router Image in Circular Shape */}
-                <div className="w-64 h-64 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
-                  <img
-                    src="https://unsplash.com/photos/a-close-up-of-a-router-connected-to-a-computer-7sfAKSSlEpw"
-                    alt="Router"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Floating Price Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-green-500 text-white font-bold px-6 py-3 rounded-full shadow-md">
-                  800Mbps - $99/mo
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    {/* {<Hero5G />} */}
+    <Hero5G />
+  
 
 
 

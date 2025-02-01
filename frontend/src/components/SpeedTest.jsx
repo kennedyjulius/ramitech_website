@@ -1,43 +1,40 @@
 import { useState } from 'react';
+import React from 'react';
 import Newsletter from './Newsletter';
 
 export default function SpeedTest() {
-  const [speed, setSpeed] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSnackbarOpen, setSnackbarOpen] = useState(false); // State to control Snackbar visibility
+  const [isLoading] = useState(false);
 
   const handleSpeedTest = () => {
-    setIsLoading(true);
-    // Simulated speed test
-    setTimeout(() => {
-      setSpeed(721);
-      setIsLoading(false);
-    }, 2000);
+    setSnackbarOpen(true); // Show Snackbar when button is clicked
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false); // Close Snackbar without redirect
+  };
+
+  const handleConfirmSnackbar = () => {
+    setSnackbarOpen(false); // Close Snackbar
+    window.open('https://fast.com', '_blank'); // Open Fast.com in a new window
   };
 
   const steps = [
     "Connect to your network",
-    "Click on Start Test button",
+    "Click on Speed Check button",
     "Wait for results",
     "View detailed analysis"
   ];
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-primary-500 to-primary-400">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-4">Speed Test</h1>
-          <p className="text-white text-center">Home → Template → Speed Test</p>
-        </div>
-      </div>
-
       {/* Speed Test Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Test your speed</h2>
             <p className="text-gray-600 mb-8">
-              Check your download and upload speeds to ensure you're getting the most out of your broadband
+              Check your download and upload speeds to ensure you're getting the most out of your broadband.
             </p>
             <button
               onClick={handleSpeedTest}
@@ -47,14 +44,8 @@ export default function SpeedTest() {
               {isLoading ? 'Testing...' : 'Speed Check'}
             </button>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center">
-              <div className="text-6xl font-bold text-primary-500 mb-2">
-                {speed}
-                <span className="text-2xl">mbps</span>
-              </div>
-              <p className="text-gray-600">Your current internet speed</p>
-            </div>
+          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+            <p className="text-gray-600">Click the button to test your speed on Fast.com</p>
           </div>
         </div>
       </div>
@@ -76,49 +67,36 @@ export default function SpeedTest() {
         </div>
       </div>
 
-      {/* Router Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">
-              Get to know the Blaster TK router with
-              <span className="text-primary-500"> 5G technology</span> by Zortex
-            </h2>
-            <ul className="space-y-4 mt-8">
-              <li className="flex items-center">
-                <svg className="w-6 h-6 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Advanced 5G support for ultra-fast speeds
-              </li>
-              <li className="flex items-center">
-                <svg className="w-6 h-6 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Dual-band WiFi for optimal performance
-              </li>
-              <li className="flex items-center">
-                <svg className="w-6 h-6 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Enhanced security features
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1544428571-c4c4576ef362?w=800&h=600&fit=crop" 
-              alt="5G Router" 
-              className="rounded-lg shadow-xl w-full h-auto" 
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Newsletter Section */}
       <div className="container mx-auto px-4 py-16">
         <Newsletter />
       </div>
+
+      {/* Snackbar for External Link Warning */}
+      {isSnackbarOpen && (
+        <div className="fixed top-8 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-xl border border-gray-300 w-96 z-50">
+          <div className="flex justify-between items-center">
+            <span className="text-gray-800 font-medium">
+              You are about to visit an external site (Fast.com) to test your internet speed.
+            </span>
+            <div className="flex space-x-4">
+              <button
+                onClick={handleCloseSnackbar}
+                className="text-sm text-gray-600 font-bold bg-transparent hover:bg-gray-100 px-3 py-1 rounded"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleConfirmSnackbar}
+                className="text-sm text-white font-bold bg-primary-500 hover:bg-primary-600 px-3 py-1 rounded"
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

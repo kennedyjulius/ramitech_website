@@ -6,15 +6,13 @@ export default function Footer() {
     { name: 'Netflix + Wifi', path: '/services#netflix' },
     { name: 'Mobile Text', path: '/services#text' },
     { name: 'Movie TV', path: '/services#movie' },
-    { name: 'Satellite TV', path: '/services#satellite' }
   ];
 
   const usefulLinks = [
-    { name: 'Broadband', path: '/services#broadband' },
-    { name: 'Speed Test', path: '/services#speed-test' },
-    { name: 'Additional Service', path: '/services#additional' },
-    { name: 'Dedicated Line', path: '/services#dedicated' },
-    { name: 'FAQ', path: '/services#faq' }
+    { name: 'Coverage Area', path: '/components/CoverageArea' },
+    { name: 'Speed Test', path: '/views/SpeedTest' },
+    { name: 'Dedicated Line', path: '/components/DedicatedLink' },
+    { name: 'FAQ', path: '/components/FAQ' }
   ];
 
   const socialLinks = [
