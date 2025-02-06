@@ -70,15 +70,8 @@ export default function About() {
       </div>
 
       {/* Packages Section */}
-      <div className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">The best internet at the best prices</h2>
-            <p className="text-gray-600">Choose the perfect plan for your needs</p>
-          </div>
-          <Packages />
-        </div>
-      </div>
+      
+      
 
       {/* Testimonials Section */}
       <div className="py-20">

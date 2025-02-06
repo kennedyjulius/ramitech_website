@@ -73,7 +73,7 @@ export default function Services() {
 
 
     {/* {<Hero5G />} */}
-    <Hero5G />
+    
   
 
 

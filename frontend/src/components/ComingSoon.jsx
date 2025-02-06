@@ -81,17 +81,7 @@ export default function ComingSoon() {
               </div>
 
               {/* Dots */}
-              <div className="flex gap-2 justify-center">
-                {[0, 1, 2, 3, 4].map((index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      currentSlide === index ? 'bg-emerald-400' : 'bg-gray-300'
-                    }`}
-                  />
-                ))}
-              </div>
+              
             </div>
 
             {/* Right Section - Image */}
