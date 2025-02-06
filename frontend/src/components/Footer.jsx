@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import ramitechLogo from '../assets/ramitech.png';
 
 export default function Footer() {
   const services = [
-    { name: 'Mobile One', path: '/services#mobile' },
+    { name: 'Streaming', path: '/services#mobile' },
     { name: 'Netflix + Wifi', path: '/services#netflix' },
-    { name: 'Mobile Text', path: '/services#text' },
-    { name: 'Movie TV', path: '/services#movie' },
+    { name: 'Mobile Wifi', path: '/services#text' },
+    { name: 'Bussiness Wifi', path: '/services#movie' },
   ];
 
   const usefulLinks = [
@@ -30,11 +31,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <img
-                src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=80&auto=format&fit=crop"
-                alt="Zortex Logo"
+                src={ramitechLogo}
+                alt="Ramitech Logo"
                 className="h-8 w-8 rounded-full"
               />
-              <span className="text-xl font-bold text-primary-500">Zortex</span>
+              <span className="text-xl font-bold text-primary-500">Ramitech</span>
             </div>
             <p className="text-gray-600 mb-6">
               The internet's high performance internet for your home or your office.
@@ -98,11 +99,11 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="font-semibold">Customer service and support</p>
-                <p className="text-primary-500">+202 4987 8976</p>
+                <p className="text-primary-500">+254 713 937 538</p>
               </div>
               <div>
-                <p className="font-semibold">Virginia Branch</p>
-                <p className="text-gray-600">2654 Virginia Beach</p>
+                <p className="font-semibold">Ramitech Networks</p>
+                <p className="text-gray-600">Nairobi, Kenya</p>
               </div>
             </div>
           </div>
@@ -111,7 +112,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-200 pt-8">
           <p className="text-center text-gray-500">
-            {new Date().getFullYear()} Zortex. All rights reserved.
+            {new Date().getFullYear()} Ramitech Networks. All rights reserved.
           </p>
         </div>
       </div>

@@ -21,10 +21,10 @@ export default function Hero() {
               <span className="text-emerald-400">work</span>
             </h1>
             <p className="text-gray-600 text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+              Join the Network People and get high-speed internet for your home or office powered by Ramitech Networks.
             </p>
             <Link 
-              to="/plans" 
+              to="/Packages" 
               className="inline-block bg-black text-white px-8 py-3 rounded-full hover:bg-gray-900 transition-colors"
             >
               See Plans
@@ -45,9 +45,9 @@ export default function Hero() {
             {/* Floating Speed Badge */}
             <div className="absolute -right-10 top-1/2 -translate-y-1/2 bg-emerald-400 text-white rounded-full p-8 shadow-lg transform rotate-12">
               <div className="text-center">
-                <div className="text-3xl font-bold">800mbps</div>
-                <div className="text-sm">with WiFiPlus</div>
-                <div className="font-bold mt-1">$99<span className="text-sm">/mo</span></div>
+                <div className="text-3xl font-bold">10mbps</div>
+                <div className="text-sm">with Airtel 5G</div>
+                <div className="font-bold mt-1">Kshs 3500<span className="text-sm">/mo</span></div>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Hero() {
             <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-300 rounded-full opacity-50"></div>
             
             <h2 className="text-2xl font-bold mb-6">The best broadband<br />in your home</h2>
-            <p className="text-lg mb-2">from $69.99/mo</p>
+            <p className="text-lg mb-2">from Kshs 2,000/mo</p>
             
             <ul className="space-y-3 mb-8">
               <li className="flex items-center gap-2">
@@ -74,18 +74,18 @@ export default function Hero() {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                 </svg>
-                <span>Boost your internet with Wi-Fi Plus</span>
+                <span>Boost your internet with Ramitech Wi-Fi</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                 </svg>
-                <span>10 years speed test more range</span>
+                <span>8+ years speed test more range</span>
               </li>
             </ul>
 
             <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-900 transition-colors">
-              I want to hire
+              Get Connected
             </button>
           </div>
 

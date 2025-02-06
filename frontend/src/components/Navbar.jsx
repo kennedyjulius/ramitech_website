@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ramitechLogo from '../assets/ramitech.png';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,11 +28,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?q=80&w=80&auto=format&fit=crop"
-              alt="Zortex Logo"
+              src={ramitechLogo}
+              alt="Ramitech Logo"
               className="h-8 w-8 rounded-full"
             />
-            <span className="text-xl font-bold text-primary-500">Zortex</span>
+            <span className="text-xl font-bold text-primary-500">Ramitech Networks</span>
           </Link>
 
           {/* Desktop Navigation */}

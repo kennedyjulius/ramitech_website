@@ -163,7 +163,7 @@ export default function DedicatedLink() {
           <div className="bg-black text-white p-8 rounded-2xl flex items-center justify-center text-center">
             <div>
               <p className="text-sm mb-1">NEED HELP? CALL US 24/7</p>
-              <p className="text-primary-500 text-2xl">+202 4987 8976</p>
+              <p className="text-primary-500 text-2xl">+254 713 937 538</p>
             </div>
           </div>
         </div>

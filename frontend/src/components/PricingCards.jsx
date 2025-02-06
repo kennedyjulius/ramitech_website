@@ -38,8 +38,8 @@ const PricingCard = ({ speed, price, features }) => {
 export default function PricingCards() {
   const pricingPlans = [
     {
-      speed: '400mbps',
-      price: '$59.99/mo',
+      speed: '8mbps',
+      price: 'Kshs 2,000/mo',
       features: [
         'Ultra Speed',
         'Mobile WiFi',
@@ -49,8 +49,8 @@ export default function PricingCards() {
       ]
     },
     {
-      speed: '600mbps',
-      price: '$79.99/mo',
+      speed: '15mbps',
+      price: 'Kshs 2,500/mo',
       features: [
         'Ultra Speed',
         'Mobile WiFi',
@@ -60,8 +60,8 @@ export default function PricingCards() {
       ]
     },
     {
-      speed: '800mbps',
-      price: '$99.99/mo',
+      speed: '20mbps',
+      price: 'Kshs 3,000/mo',
       features: [
         'Ultra Speed',
         'Mobile WiFi',
