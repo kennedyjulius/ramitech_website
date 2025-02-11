@@ -1,37 +1,57 @@
 import React, { useState, useEffect } from 'react';
 
-const partners = [
+const defaultPartners = [
   {
     name: 'Partner 1',
-    logo: 'https://via.placeholder.com/150x80',
+    imageUrl: 'https://via.placeholder.com/150x80',
   },
   {
     name: 'Partner 2',
-    logo: 'https://via.placeholder.com/150x80',
+    imageUrl: 'https://via.placeholder.com/150x80',
   },
   {
     name: 'Partner 3',
-    logo: 'https://via.placeholder.com/150x80',
-  },
-  {
-    name: 'Partner 4',
-    logo: 'https://via.placeholder.com/150x80',
-  },
-  {
-    name: 'Partner 5',
-    logo: 'https://via.placeholder.com/150x80',
+    imageUrl: 'https://via.placeholder.com/150x80',
   }
 ];
 
 export default function Partners() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [partners, setPartners] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Fetch partners from backend
   useEffect(() => {
+    const fetchPartners = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/partners');
+        if (!response.ok) {
+          throw new Error('Failed to fetch partners');
+        }
+        const data = await response.json();
+        setPartners(data.length > 0 ? data : defaultPartners);
+      } catch (err) {
+        console.error('Error fetching partners:', err);
+        setError(err.message);
+        setPartners(defaultPartners);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPartners();
+  }, []);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (partners.length === 0) return;
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % partners.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [partners.length]);
 
   return (
     <div className="bg-gray-50 py-12">
@@ -58,7 +78,7 @@ export default function Partners() {
                   <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="h-20 flex items-center justify-center">
                       <img
-                        src={partner.logo}
+                        src={partner.imageUrl || partner.localImage}
                         alt={partner.name}
                         className="max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                       />

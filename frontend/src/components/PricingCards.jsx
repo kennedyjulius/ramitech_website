@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const PricingCard = ({ speed, price, features }) => {
   return (
@@ -36,7 +36,79 @@ const PricingCard = ({ speed, price, features }) => {
 };
 
 export default function PricingCards() {
-  const pricingPlans = [
+  const [pricingPlans, setPricingPlans] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchPackages = async () => {
+      try {
+        console.log('Fetching packages...');
+        const response = await fetch('http://localhost:5000/api/internet-packages', {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          mode: 'cors'
+        });
+        
+        console.log('Response status:', response.status);
+        const data = await response.json();
+        console.log('Received data:', data);
+        
+        if (!Array.isArray(data)) {
+          console.error('Unexpected data format:', data);
+          throw new Error('Invalid data format received from server');
+        }
+        
+        // Transform the data to match our component's format
+        const formattedData = data.map(pkg => {
+          console.log('Processing package:', pkg);
+          return {
+            speed: `${pkg.speed}mbps`,
+            price: `Kshs ${pkg.price}/mo`,
+            features: [
+              'Ultra Speed',
+              'Mobile WiFi',
+              'No Data Caps',
+              'Free Installation',
+              'Call Support'
+            ]
+          };
+        });
+        
+        console.log('Formatted data:', formattedData);
+        setPricingPlans(formattedData);
+      } catch (err) {
+        console.error('Error fetching packages:', err);
+        setError(err.message || 'Failed to fetch packages');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPackages();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <div className="text-lg">Loading packages...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center min-h-[400px]">
+        <div className="text-red-500">Error: {error}</div>
+      </div>
+    );
+  }
+
+  // Fallback data if no packages are available
+  const defaultPlans = [
     {
       speed: '8mbps',
       price: 'Kshs 2,000/mo',
@@ -74,7 +146,7 @@ export default function PricingCards() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {pricingPlans.map((plan, index) => (
+      {(pricingPlans.length > 0 ? pricingPlans : defaultPlans).map((plan, index) => (
         <PricingCard
           key={index}
           speed={plan.speed}

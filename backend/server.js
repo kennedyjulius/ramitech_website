@@ -5,7 +5,13 @@ const cors = require("cors");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(express.json());
+app.use(cors({
+  origin: '*',  // Allow all origins for now
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  exposedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json({
   verify: (req, res, buf, encoding) => {
     try {
@@ -32,6 +38,7 @@ app.use("/api/coming-soon", require("./routes/comingSoonRoutes"));
 app.use("/api/coverage-areas", require("./routes/coverageAreaRoutes"));
 app.use("/api/services", require("./routes/servicesRoutes"));
 app.use("/api/internet-packages", require("./routes/internetPackageRoutes"));
+app.use("/api/partners", require("./routes/partnerRoutes"));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
