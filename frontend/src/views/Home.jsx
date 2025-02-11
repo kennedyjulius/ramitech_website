@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CheckConnectionModal from '../components/CheckConnectionModal';
 import Hero from '../components/Hero';
 import Testimonials from '../components/Testimonials';
@@ -12,34 +12,38 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       {/* Hero Section */}
       <Hero />
 
-      {/* Services Section */}
-      
-
-      {/* Coverage Area */}
-      {/* <CoverageArea /> */}
-
       {/* Packages Section */}
-      <PricingCards />
+      <div className="mt-8 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.3s' }}>
+        <PricingCards />
+      </div>
       {/* {/Packages/} */}
-      <SpeedTest/>
+      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.6s' }}>
+        <SpeedTest/>
+      </div>
 
       {/* Coming Soon Section */}
-      <ComingSoon />
+      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.9s' }}>
+        <ComingSoon />
+      </div>
 
-      <Partners />
+      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.2s' }}>
+        <Partners />
+      </div>
 
       {/* Testimonials Section */}
-      <Testimonials />
+      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.5s' }}>
+        <Testimonials />
+      </div>
 
       {/* FAQ Section */}
       
 
       {/* Newsletter Section */}
-      <div className="py-20">
+      <div className="py-20 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.8s' }}>
         <Newsletter />
       </div>
 
