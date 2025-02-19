@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="bg-white">
       {/* Hero Section with Wavy Background */}
-      <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+      <div className="relative bg-[#376B99] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute bottom-0 w-full h-20">
             <svg viewBox="0 0 1440 120" className="w-full h-full">
@@ -39,8 +39,8 @@ export default function About() {
                 alt="Happy Family Using Internet"
                 className="rounded-3xl shadow-lg w-full h-auto"
               />
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-emerald-400 rounded-full"></div>
-              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-emerald-400 rounded-full"></div>
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-[#376B99] rounded-full"></div>
+              <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-[#376B99] rounded-full"></div>
             </div>
           </div>
         </div>

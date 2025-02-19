@@ -19,7 +19,7 @@ export default function Features() {
                 Experience seamless streaming with our high-speed internet service.
                 Perfect for the whole family.
               </p>
-              <button className="bg-primary-500 text-white px-8 py-4 rounded-full text-lg hover:bg-primary-600 transition-colors">
+              <button className="bg-[#376B99] text-white px-8 py-4 rounded-full text-lg hover:bg-[#2a517a] transition-colors">
                 Learn More
               </button>
             </div>

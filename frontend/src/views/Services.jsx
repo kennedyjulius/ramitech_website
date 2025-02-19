@@ -6,7 +6,7 @@ export default function ServicesView() {
   return (
     <div className="bg-white">
     {/* Hero Section with Wavy Background */}
-    <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+    <div className="relative bg-[#376B99] overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute bottom-0 w-full h-20">
           <svg viewBox="0 0 1440 120" className="w-full h-full">

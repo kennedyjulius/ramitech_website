@@ -98,7 +98,7 @@ export default function FAQ() {
       </div>
 
       {/* 5G Connection Section */}
-      <div className="bg-gradient-to-br from-primary-500 to-primary-400 py-20 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-[#376B99] to-[#2a517a] py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           {/* Decorative Elements */}
@@ -139,7 +139,7 @@ export default function FAQ() {
                 className="rounded-2xl shadow-lg w-full h-auto"
               />
             </div>
-            <div className="bg-primary-500 rounded-2xl p-8 text-white">
+            <div className="bg-[#376B99] rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Hire the best broadband in your region today</h3>
               <p className="mb-8 opacity-90">
                 Get connected with high-speed internet that suits your needs.
@@ -155,7 +155,7 @@ export default function FAQ() {
       {/* Newsletter and Help Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-primary-500 rounded-2xl p-8">
+          <div className="bg-[#376B99] rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Newsletter</h3>
             <div className="flex gap-2">
               <input 
@@ -171,7 +171,7 @@ export default function FAQ() {
           <div className="bg-black text-white p-8 rounded-2xl flex items-center justify-center text-center">
             <div>
               <p className="text-sm mb-1">NEED HELP? CALL US 24/7</p>
-              <p className="text-primary-500 text-2xl">+254 713 937 538</p>
+              <p className="text-[#376B99] text-2xl">+254 713 937 538</p>
             </div>
           </div>
         </div>

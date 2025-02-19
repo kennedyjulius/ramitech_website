@@ -17,33 +17,32 @@ export default function Home() {
       <Hero />
 
       {/* Packages Section */}
-      <div className="mt-8 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.3s' }}>
+      <div className="mt-4 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.3s' }}>
         <PricingCards />
       </div>
-      {/* {/Packages/} */}
-      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.6s' }}>
+
+      {/* Speed Test Section */}
+      <div className="mt-4 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.6s' }}>
         <SpeedTest/>
       </div>
 
       {/* Coming Soon Section */}
-      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.9s' }}>
+      <div className="mt-4 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '0.9s' }}>
         <ComingSoon />
       </div>
 
-      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.2s' }}>
+      {/* Partners Section */}
+      <div className="mt-4 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.2s' }}>
         <Partners />
       </div>
 
       {/* Testimonials Section */}
-      <div className="animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.5s' }}>
+      <div className="mt-4 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.5s' }}>
         <Testimonials />
       </div>
 
-      {/* FAQ Section */}
-      
-
       {/* Newsletter Section */}
-      <div className="py-20 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.8s' }}>
+      <div className="mt-4 pb-8 animate-[slideUp_1s_ease-out] opacity-0" style={{ animationFillMode: 'forwards', animationDelay: '1.8s' }}>
         <Newsletter />
       </div>
 

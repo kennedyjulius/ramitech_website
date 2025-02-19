@@ -75,7 +75,7 @@ export default function ComingSoon() {
                     {/* Countdown Timer */}
                     <div className="grid grid-cols-4 gap-4">
                       {["days", "hours", "minutes", "seconds"].map((unit) => (
-                        <div key={unit} className="bg-emerald-400 rounded-xl p-4 text-center text-white">
+                        <div key={unit} className="bg-[#376B99] rounded-xl p-4 text-center text-white">
                           <div className="text-3xl font-bold">{timeLeft[unit]}</div>
                           <div className="text-sm">{unit.charAt(0).toUpperCase() + unit.slice(1)}</div>
                         </div>
@@ -87,9 +87,9 @@ export default function ComingSoon() {
                       <input
                         type="email"
                         placeholder="Enter your email"
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                        className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#376B99]"
                       />
-                      <button className="px-6 py-2 bg-emerald-400 text-white rounded-full hover:bg-emerald-500 transition-colors">
+                      <button className="px-6 py-2 bg-[#376B99] text-white rounded-full hover:bg-[#2a517a] transition-colors">
                         Send
                       </button>
                     </div>
@@ -103,8 +103,8 @@ export default function ComingSoon() {
                       className="w-full h-full object-cover rounded-2xl"
                     />
                     {/* Decorative Elements */}
-                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-emerald-400/20 rounded-full" />
-                    <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-400/20 rounded-full" />
+                    <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#376B99]/20 rounded-full" />
+                    <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#376B99]/20 rounded-full" />
                   </div>
                 </div>
               </div>

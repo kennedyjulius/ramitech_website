@@ -2,6 +2,10 @@ const Admin = require('../models/Admin');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
+// Store active users in memory with their token expiration timeouts
+let activeUsers = new Set();
+let userTimeouts = new Map();
+
 
 const generateToken = (id, email) => {
     return jwt.sign({id, email}, process.env.JWT_SECRET || 'your_secret_key', { expiresIn: '1h'});
@@ -20,6 +24,15 @@ exports.signup = async (req, res) => {
     const token = generateToken({ id: newAdmin._id, email: newAdmin.email });
 
     res.status(201).json({ message: 'Admin created successfully' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Get active users count
+exports.getActiveUsers = async (req, res) => {
+  try {
+    res.json({ count: activeUsers.size });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -45,6 +58,22 @@ exports.login = async (req, res) => {
         process.env.JWT_SECRET || "your_secret_key",
         { expiresIn: "1h" }
       );
+
+      // Add user to active users with timeout
+      activeUsers.add(admin.email);
+      
+      // Clear any existing timeout for this user
+      if (userTimeouts.has(admin.email)) {
+        clearTimeout(userTimeouts.get(admin.email));
+      }
+      
+      // Set new timeout to remove user after token expiration (1 hour)
+      const timeout = setTimeout(() => {
+        activeUsers.delete(admin.email);
+        userTimeouts.delete(admin.email);
+      }, 3600000); // 1 hour in milliseconds
+      
+      userTimeouts.set(admin.email, timeout);
   
       res.json({ token });
     } catch (err) {
@@ -60,6 +89,36 @@ exports.getProfile = async (req, res) => {
     if (!admin) return res.status(400).json({ message: 'Admin not found' });
 
     res.json({ username: admin.username, email: admin.email });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Logout logic
+exports.logout = async (req, res) => {
+  try {
+    const token = req.headers.authorization?.split(' ')[1];
+    if (!token) {
+      return res.status(401).json({ message: 'No token provided' });
+    }
+
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_secret_key');
+      const { email } = decoded;
+
+      // Remove user from active users
+      activeUsers.delete(email);
+      
+      // Clear timeout if exists
+      if (userTimeouts.has(email)) {
+        clearTimeout(userTimeouts.get(email));
+        userTimeouts.delete(email);
+      }
+
+      res.json({ message: 'Logged out successfully' });
+    } catch (err) {
+      return res.status(401).json({ message: 'Invalid token' });
+    }
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

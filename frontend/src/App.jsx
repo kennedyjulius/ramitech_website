@@ -8,6 +8,10 @@ import ServicesView from './views/Services';
 import Packages from './views/Packages';
 import Contact from './views/Contact';
 import NotFound from './components/NotFound';
+import AdminLogin from './admin/components/AdminLogin';
+import AdminDashboard from './admin/components/AdminDashboard';
+import PasswordReset from './admin/components/PasswordReset';
+import AdminSignup from './admin/components/AdminSignup';
 import SpeedTest from './views/SpeedTest';
 import FAQ from './components/FAQ';
 import CoverageArea from './components/CoverageArea';
@@ -37,6 +41,19 @@ export default function App() {
             <Route path="/coverage-area" element={<CoverageArea />} />
             <Route path="/dedicated-line" element={<DedicatedLink />} /> {/* Fixed name */}
             <Route path="/404" element={<NotFound />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin/signup" element={<AdminSignup />} />
+            <Route path="/admin/reset-password" element={<PasswordReset />} />
+            <Route
+              path="/admin/dashboard"
+              element={
+                localStorage.getItem('adminToken') ? (
+                  <AdminDashboard />
+                ) : (
+                  <Navigate to="/admin/login" replace />
+                )
+              }
+            />
             <Route path="*" element={<Navigate to="/404" replace />} />
           </Routes>
         </main>

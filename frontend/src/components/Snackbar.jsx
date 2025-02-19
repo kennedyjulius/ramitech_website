@@ -16,7 +16,7 @@ export default function Snackbar({ message, open, onClose, onConfirm }) {
         </button>
         <button
           onClick={onConfirm}
-          className="text-sm text-white font-bold bg-green-500 px-3 py-1 rounded hover:bg-green-600 transition-colors"
+          className="text-sm text-white font-bold bg-[#376B99] px-3 py-1 rounded hover:bg-[#376B99]/90 transition-colors"
         >
           Proceed
         </button>

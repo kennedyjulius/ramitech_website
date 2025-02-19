@@ -3,7 +3,7 @@ import React from 'react';
 export default function CoverageArea() {
   return (
     <div className="bg-white min-h-screen">
-      <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#376B99] to-[#2a517a] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute bottom-0 w-full h-20">
             <svg viewBox="0 0 1440 120" className="w-full h-full">
@@ -14,11 +14,12 @@ export default function CoverageArea() {
         <div className="container mx-auto px-4 pt-20 pb-32 relative">
           <h1 className="text-5xl font-bold text-white text-center mb-4">Coverage Area</h1>
           <div className="w-32 h-1 bg-white mx-auto opacity-50"></div>
+          <p className="text-white text-center mt-4 opacity-80">Find our coverage in your area</p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-white rounded-lg shadow-xl p-8">
+        <div className="bg-white rounded-lg shadow-xl p-8 border border-[#376B99]/10 hover:border-[#376B99]/30 transition-colors">
           <div className="aspect-video w-full">
             {/* Replace with your actual map embed code */}
             <iframe

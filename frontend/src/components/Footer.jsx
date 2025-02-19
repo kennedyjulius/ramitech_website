@@ -35,7 +35,7 @@ export default function Footer() {
                 alt="Ramitech Logo"
                 className="h-8 w-8 rounded-full"
               />
-              <span className="text-xl font-bold text-primary-500">Ramitech</span>
+              <span className="text-xl font-bold text-[#376B99]">Ramitech</span>
             </div>
             <p className="text-gray-600 mb-6">
               The internet's high performance internet for your home or your office.
@@ -48,7 +48,7 @@ export default function Footer() {
                   href={`https://${social.name.toLowerCase()}.com`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-500 transition-colors"
+                  className="text-gray-400 hover:text-[#376B99] transition-colors"
                 >
                   <span className="sr-only">{social.name}</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Footer() {
                 <li key={service.path}>
                   <Link
                     to={service.path}
-                    className="text-gray-600 hover:text-primary-500 transition-colors"
+                    className="text-gray-600 hover:text-[#376B99] transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-gray-600 hover:text-primary-500 transition-colors"
+                    className="text-gray-600 hover:text-[#376B99] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -99,7 +99,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="font-semibold">Customer service and support</p>
-                <p className="text-primary-500">+254 713 937 538</p>
+                <p className="text-[#376B99]">+254 713 937 538</p>
               </div>
               <div>
                 <p className="font-semibold">Ramitech Networks</p>

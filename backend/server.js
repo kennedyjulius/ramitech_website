@@ -6,6 +6,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use('/uploads', express.static('uploads'));
 app.use(cors({
   origin: '*',  // Allow all origins for now
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -39,6 +40,7 @@ app.use("/api/coverage-areas", require("./routes/coverageAreaRoutes"));
 app.use("/api/services", require("./routes/servicesRoutes"));
 app.use("/api/internet-packages", require("./routes/internetPackageRoutes"));
 app.use("/api/partners", require("./routes/partnerRoutes"));
+app.use("/api/images", require("./routes/imageRoutes"));
 
 // Error handling middleware
 app.use((err, req, res, next) => {

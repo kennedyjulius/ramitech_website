@@ -4,7 +4,7 @@ export default function DedicatedLink() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary-500 to-primary-400 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-[#376B99] to-[#2a517a] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           {/* Decorative Elements */}
@@ -23,12 +23,12 @@ export default function DedicatedLink() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-primary-500 font-semibold mb-4">GET HIGH PERFORMANCE</p>
+              <p className="text-[#376B99] font-semibold mb-4">GET HIGH PERFORMANCE</p>
               <h2 className="text-4xl font-bold mb-6">Get speed with a dedicated link to your company</h2>
               <p className="text-gray-600 mb-8">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
               </p>
-              <button className="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors">
+              <button className="bg-[#376B99] text-white px-8 py-3 rounded-full hover:bg-[#2a517a] transition-colors">
                 Read More
               </button>
             </div>
@@ -109,7 +109,7 @@ export default function DedicatedLink() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-6 bg-primary-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#376B99] rounded-full flex items-center justify-center">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -120,7 +120,7 @@ export default function DedicatedLink() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-6 bg-primary-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#376B99] rounded-full flex items-center justify-center">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
               </svg>
@@ -131,7 +131,7 @@ export default function DedicatedLink() {
             </p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 mx-auto mb-6 bg-primary-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-[#376B99] rounded-full flex items-center justify-center">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
@@ -147,7 +147,7 @@ export default function DedicatedLink() {
       {/* Newsletter and Help Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-primary-500 rounded-2xl p-8">
+          <div className="bg-[#376B99] rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Newsletter</h3>
             <div className="flex gap-2">
               <input 
@@ -163,7 +163,7 @@ export default function DedicatedLink() {
           <div className="bg-black text-white p-8 rounded-2xl flex items-center justify-center text-center">
             <div>
               <p className="text-sm mb-1">NEED HELP? CALL US 24/7</p>
-              <p className="text-primary-500 text-2xl">+254 713 937 538</p>
+              <p className="text-[#376B99] text-2xl">+254 713 937 538</p>
             </div>
           </div>
         </div>

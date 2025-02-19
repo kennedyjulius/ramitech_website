@@ -39,7 +39,7 @@ export default function Services() {
 <div className="container mx-auto px-4 py-20">
   <div className="max-w-6xl mx-auto">
     <div className="mb-12">
-      <p className="text-primary-500 font-semibold mb-4">OUR SERVICES</p>
+      <p className="text-[#376B99] font-semibold mb-4">OUR SERVICES</p>
       <h2 className="text-4xl font-bold mb-6">Live all the connections with our services</h2>
     </div>
 
@@ -86,7 +86,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <p className="text-primary-500 font-semibold mb-4">FREE STREAMING</p>
+              <p className="text-[#376B99] font-semibold mb-4">FREE STREAMING</p>
               <h2 className="text-4xl font-bold mb-6">Celebrating with friends on an ultra fast internet is priceless</h2>
               <img
                 src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&h=600&fit=crop"
@@ -94,7 +94,7 @@ export default function Services() {
                 className="w-full h-auto rounded-2xl shadow-lg mb-8"
               />
             </div>
-            <div className="bg-primary-500 rounded-2xl p-8 text-white self-center">
+            <div className="bg-[#376B99] rounded-2xl p-8 text-white self-center">
               <h3 className="text-2xl font-bold mb-4">Hire the best broadband in your region today</h3>
               <p className="mb-8 opacity-90">
                 Get connected with high-speed internet that suits your needs.
@@ -116,7 +116,7 @@ export default function Services() {
               <p className="text-gray-600 mb-8">
                 Find answers to commonly asked questions about our services and features.
               </p>
-              <button className="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors">
+              <button className="bg-[#376B99] text-white px-8 py-3 rounded-full hover:bg-[#2a517a] transition-colors">
                 Read More
               </button>
             </div>

@@ -17,7 +17,7 @@ export default function ContactView() {
   return (
     <div className="bg-white">
       {/* Hero Section with Wavy Background */}
-      <div className="relative bg-gradient-to-r from-emerald-400 to-emerald-600 overflow-hidden">
+      <div className="relative bg-[#376B99] overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute bottom-0 w-full h-20">
             <svg viewBox="0 0 1440 120" className="w-full h-full">
@@ -49,7 +49,7 @@ export default function ContactView() {
                     placeholder="Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-emerald-500"
+                    className="w-full px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-[#376B99]"
                   />
                   <input
                     type="email"
@@ -57,7 +57,7 @@ export default function ContactView() {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-emerald-500"
+                    className="w-full px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-[#376B99]"
                   />
                 </div>
                 <input
@@ -114,7 +114,7 @@ export default function ContactView() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-3xl p-8 text-white relative overflow-hidden">
+          <div className="bg-[#376B99] rounded-3xl p-8 text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-white rounded-full"></div>
               <div className="absolute -left-8 -top-8 w-32 h-32 bg-white rounded-full"></div>
@@ -130,7 +130,7 @@ export default function ContactView() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-3xl p-8 text-white relative overflow-hidden">
+          <div className="bg-[#376B99] rounded-3xl p-8 text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-white rounded-full"></div>
               <div className="absolute -left-8 -top-8 w-32 h-32 bg-white rounded-full"></div>
@@ -146,7 +146,7 @@ export default function ContactView() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-3xl p-8 text-white relative overflow-hidden">
+          <div className="bg-[#376B99] rounded-3xl p-8 text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-white rounded-full"></div>
               <div className="absolute -left-8 -top-8 w-32 h-32 bg-white rounded-full"></div>

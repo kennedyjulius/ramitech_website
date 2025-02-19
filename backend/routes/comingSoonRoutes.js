@@ -2,10 +2,16 @@ const express = require('express');
 const router = express.Router();
 const comingSoonController = require('../controllers/comingSoonController');
 
-// Update the Coming Soon section (admin only)
-router.post('/', comingSoonController.updateComingSoon);  // This will be for updating
-
-// Optionally, you can add a route to get the current "Coming Soon" section (optional)
+// Get all announcements
 router.get('/', comingSoonController.getComingSoon);
+
+// Create a new announcement
+router.post('/', comingSoonController.createComingSoon);
+
+// Update an announcement
+router.put('/:id', comingSoonController.updateComingSoon);
+
+// Delete an announcement
+router.delete('/:id', comingSoonController.deleteComingSoon);
 
 module.exports = router;

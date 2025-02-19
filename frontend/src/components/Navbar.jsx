@@ -32,7 +32,7 @@ export default function Navbar() {
               alt="Ramitech Logo"
               className="h-8 w-8 rounded-full"
             />
-            <span className="text-xl font-bold text-primary-500">Ramitech Networks</span>
+            <span className="text-xl font-bold text-[#376B99]">Ramitech Networks</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,8 +43,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`font-medium ${
                   isActivePath(link.path)
-                    ? 'text-primary-500'
-                    : 'text-gray-500 hover:text-primary-500'
+                    ? 'text-[#376B99]'
+                    : 'text-gray-500 hover:text-[#376B99]'
                 } transition-colors`}
               >
                 {link.name}
@@ -55,10 +55,22 @@ export default function Navbar() {
           {/* My Account Button */}
           <div className="hidden md:flex items-center">
             <Link
-              to="/contact"
-              className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-colors"
+              to="/admin/login"
+              className="bg-[#376b99] text-white px-6 py-2 rounded-full hover:bg-[#2a5276] transition-colors flex items-center space-x-2 group"
             >
-              My Account
+              <span>My Account</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 transform group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </Link>
             <Link
               to="/coverage-area"
@@ -123,8 +135,8 @@ export default function Navbar() {
                   to={link.path}
                   className={`font-medium ${
                     isActivePath(link.path)
-                      ? 'text-primary-500'
-                      : 'text-gray-500 hover:text-primary-500'
+                      ? 'text-[#376B99]'
+                      : 'text-gray-500 hover:text-[#376B99]'
                   } transition-colors`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -133,14 +145,14 @@ export default function Navbar() {
               ))}
               <Link
                 to="/contact"
-                className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-colors text-center"
+                className="bg-[#376B99] text-white px-6 py-2 rounded-full hover:bg-[#376B99]/80 transition-colors text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 My Account
               </Link>
               <Link
                 to="/coverage-area"
-                className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-colors text-center"
+                className="bg-[#376B99] text-white px-6 py-2 rounded-full hover:bg-[#376B99]/80 transition-colors text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Coverage Area

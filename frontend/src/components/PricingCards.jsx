@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 const PricingCard = ({ speed, price, features, index }) => {
   return (
     <div 
-      className="bg-emerald-400 rounded-2xl p-8 flex flex-col gap-4 relative overflow-hidden hover:transform hover:scale-105 transition-all duration-500 group animate-[slideUp_1s_ease-out] opacity-0"
+      className="bg-[#376B99] rounded-2xl p-8 flex flex-col gap-4 relative overflow-hidden hover:transform hover:scale-105 transition-all duration-500 group animate-[slideUp_1s_ease-out] opacity-0"
       style={{ animationDelay: `${index * 0.2}s`, animationFillMode: 'forwards' }}
     >
       {/* Background decorative elements */}
-      <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-300 rounded-full opacity-50 transition-transform duration-500 group-hover:scale-125" />
-      <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-300 rounded-full opacity-30 transition-transform duration-500 group-hover:scale-150" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-[#376B99]/70 rounded-full opacity-50 transition-transform duration-500 group-hover:scale-125" />
+      <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-[#376B99]/70 rounded-full opacity-30 transition-transform duration-500 group-hover:scale-150" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#376B99]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Speed */}
       <div className="text-4xl font-bold text-white mb-2 transform transition-transform duration-500 group-hover:scale-110 group-hover:translate-x-2">{speed}</div>
@@ -102,7 +102,7 @@ export default function PricingCards() {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-12 h-12 border-4 border-[#376B99] border-t-transparent rounded-full animate-spin"></div>
           <div className="text-lg animate-pulse">Loading packages...</div>
         </div>
       </div>
@@ -165,10 +165,10 @@ export default function PricingCards() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-400/10 to-transparent mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#376B99]/10 to-transparent mix-blend-overlay" />
         <div className="grid grid-cols-8 gap-4 -rotate-12 scale-150 opacity-20">
           {Array(64).fill(0).map((_, i) => (
-            <div key={i} className="h-8 bg-emerald-400/20 rounded-full animate-pulse" 
+            <div key={i} className="h-8 bg-[#376B99]/20 rounded-full animate-pulse" 
               style={{ animationDelay: `${i * 0.1}s` }} />
           ))}
         </div>

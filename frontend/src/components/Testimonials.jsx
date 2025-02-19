@@ -35,10 +35,10 @@ export default function Testimonials() {
     <div className="bg-white py-20 lg:py-24 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-400/10 to-transparent mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#376B99]/10 to-transparent mix-blend-overlay" />
         <div className="grid grid-cols-12 gap-4 rotate-12 scale-150 opacity-20">
           {Array(144).fill(0).map((_, i) => (
-            <div key={i} className="h-8 bg-emerald-400/20 rounded-full animate-pulse" 
+            <div key={i} className="h-8 bg-[#376B99]/20 rounded-full animate-pulse" 
               style={{ animationDelay: `${i * 0.1}s` }} />
           ))}
         </div>
@@ -58,17 +58,17 @@ export default function Testimonials() {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Decorative elements */}
-              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-300/30 rounded-full opacity-50 transition-transform duration-500 group-hover:scale-125" />
-              <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-300/20 rounded-full opacity-30 transition-transform duration-500 group-hover:scale-150" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-[#376B99]/30 rounded-full opacity-50 transition-transform duration-500 group-hover:scale-125" />
+              <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-[#376B99]/20 rounded-full opacity-30 transition-transform duration-500 group-hover:scale-150" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#376B99]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="flex items-center mb-5 relative z-10">
               <div className="relative">
                 <img 
                   src={testimonial.image}
                   alt={testimonial.name} 
-                  className="w-16 h-16 rounded-full mr-5 object-cover transition-transform duration-500 group-hover:scale-110 ring-2 ring-emerald-400/30" 
+                  className="w-16 h-16 rounded-full mr-5 object-cover transition-transform duration-500 group-hover:scale-110 ring-2 ring-[#376B99]/30" 
                 />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#376B99]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="transform transition-all duration-500 group-hover:translate-x-2">
                 <h4 className="text-xl font-bold">{testimonial.name}</h4>
@@ -89,7 +89,7 @@ export default function Testimonials() {
               key={index}
               onClick={() => setActiveIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-150
-                ${index === activeIndex ? 'bg-emerald-400 scale-125' : 'bg-gray-300'}`}
+                ${index === activeIndex ? 'bg-[#376B99] scale-125' : 'bg-gray-300'}`}
             />
           ))}
         </div>

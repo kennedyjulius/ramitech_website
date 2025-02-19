@@ -30,8 +30,8 @@ const Hero5G = () => {
                 y2="0"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0%" stopColor="#4ade80" />
-                <stop offset="100%" stopColor="#10b981" />
+                <stop offset="0%" stopColor="#376B99" />
+                <stop offset="100%" stopColor="#2a517a" />
               </linearGradient>
             </defs>
           </svg>
